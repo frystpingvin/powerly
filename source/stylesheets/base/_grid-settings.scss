@@ -1,0 +1,9 @@
+$susy: (
+  columns: 12, gutters: 1/2
+);
+
+.container {
+  @include container(1200px);
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+};

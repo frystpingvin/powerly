@@ -1,0 +1,54 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: $base-spacing*2 0;
+
+  @include breakpoint($medium-screen) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: $base-spacing*3 0;
+  }
+}
+
+.hero__image {
+  flex: 0 0 span(12);
+  animation: fadeDownIn $animation-duration ease-in-out backwards 50ms;
+
+  @include breakpoint($medium-screen) {
+    flex: 0 0 span(3);
+    order: 2;
+  }
+
+  @include breakpoint($large-screen) {
+    flex: 0 0 span(5);
+  }
+}
+
+.hero__content {
+  flex: 0 0 span(12);
+
+  @include breakpoint($medium-screen) {
+    flex: 0 0 span(9);
+  }
+
+  @include breakpoint($large-screen) {
+    flex: 0 0 span(7);
+  }
+}
+
+.hero__content__text {
+  max-width: 500px;
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing + $small-spacing;
+}
+
+.hero__content__link {
+  display: inline-block;
+  margin-top: $small-spacing;
+
+  @include breakpoint($medium-screen) {
+    display: inline;
+    margin-left: $small-spacing/2;
+  }
+}
